@@ -1,0 +1,319 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* {
+    box-sizing: border-box;
+}*/
+
+html {
+    font-size:16px;
+}
+
+body{
+display: inline;
+float: left;
+position: relative;
+max-width: 95%;
+}
+
+/*body {
+    margin: 1.5rem auto;
+    width:90%;
+}*/
+
+@font-face{
+    font-family:sansfont1;
+    src: url("../fonts/sans-serif/lato-regular.ttf")
+        format('truetype');
+        font-weight:normal;
+        font-style:normal;
+}
+
+@font-face{
+    font-family:seriffont1;
+    src:url("../fonts/serif/josefinslab-regular.ttf")
+        format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+    font-family:seriffont2;
+    src:url("../fonts/serif/ultra-regular.ttf")
+        format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+/*.highlight{
+    background-color: firebrick;
+    color: beige;
+    
+}*/
+
+h1 {
+    transform: rotate(-9deg);
+     font-family: seriffont2,serif;
+word-spacing: 0.125rem;
+    text-align: center;
+    color: dimgrey;
+}
+
+h1>span {
+    display: inline-block;
+    background-color: gray;
+    color: goldenrod;
+}
+
+
+nav{
+    width: 100%;
+    margin-top: 40px;
+       border-top: 5px solid gray;
+    border-bottom: 5px solid gray;
+}
+
+nav a {
+    font-family: seriffont1, serif;
+    display: inline-block;
+    padding: 2rem 2rem;
+    margin: 2rem 2rem;
+ 
+}
+
+nav a:focus,
+nav a:hover:{
+    color: dimgray;
+    background-color: goldenrod;
+}
+
+nav a:hover:not(.active){
+background-color:goldenrod;
+text-decoration: line-through;
+}
+
+a{
+    text-underline-position: none;
+}
+
+a:link,
+a:visited {
+    color: black;
+}
+
+p{
+  font-family: sansfont1, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+time{
+  font-style: italic;
+    
+}
+
+.column {
+  
+    width: 15%;
+  padding: 5px;
+}
+
+.subpics {
+   height: 100%;
+    width: 100%;
+}
+
+.subpicsnew{
+    height: 100%;
+    width: 100%;
+}
+
+figure{
+display: block;
+margin-block-start:1em;
+margin-block-end:1em;
+margin-inline-start:5px;
+margin-inline-end-30px:
+}
+
+.weirdpics{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*.right {
+  width: 15%;
+}*/
+
+/*.columnR {
+  display: flex;
+    flex-direction: column;
+}*/
+
+.asidecontent {
+	display: inline;
+}
+
+.rsection {
+height: auto;
+width: auto;
+}
+	
+
+figcaption{
+   background-color: beige;
+}
+.article-image{
+float: left;    
+margin: 0 15px 0 0;
+}
+
+.logo{
+	float: center;
+	size:50%;
+}
+
+.asidecontainer{
+    float: right;
+    padding-left: 20px;
+    width: 15%;
+}
+
+
+.main-section{
+float: left;
+width: 75%;
+padding-left: 15px;
+}
+
+/*
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: White;
+    
+}
+
+li {
+  float: left;
+   
+}
+
+li a {
+  display: block;
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: gray;
+}*/
+
+aside {
+  padding-left: 5px;
+  margin-left: 5px;
+ display: inline;
+  font-style: italic;
+  background-color: white;
+    border-left: 2px solid gray;
+}
+
+.asidep{
+ font-size: 15px;
+word-wrap:break-word; 
+ }
+
+h3{
+    margin: 0.625rem;
+}
+
+button{
+    background-color: dimgray;
+    color: goldenrod;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    border-radius: 15px;
+    height: 50px;
+    width: 150px;
+}
+
+button:hover{
+background-color: goldenrod;
+font-weight: bold;
+
+}
+
+footer{
+    width: 100%;
+    font-size:12px;
+}
+
+.footer{
+	clear: both;
+}
+
+.footerright{
+text-align: right;
+float: right;
+}
+
+.footerleft{
+text-align: left;
+float: left;
+}
+
+  /*display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;*/

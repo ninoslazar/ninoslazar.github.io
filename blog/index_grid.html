@@ -1,0 +1,54 @@
+<!doctype html>
+<title>Grid Example</title>
+<style>
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+	"article article sub2"
+	"sub1 sub1 sub2"
+    "footer footer sub2";
+  grid-template-rows: 60px 60px 1fr;
+  grid-template-columns: 35% 35% 1fr;
+  grid-gap: 10px;
+  height: 100vh;
+  margin: 0;
+  }
+header, footer, article, nav, div {
+  padding: 20px;
+  background: yellow;
+}
+#pageHeader {
+  grid-area: header;
+}
+#pageFooter {
+  grid-area: footer;
+}
+#mainArticle { 
+  grid-area: article;      
+  }
+#mainNav { 
+  grid-area: nav; 
+  }
+#siteSub1 { 
+  grid-area: sub1; 
+  }
+#siteSub2 { 
+  grid-area: sub2; 
+  }
+</style>
+<body>
+  <header id="pageHeader">Header
+  </header>
+  
+ <nav id="mainNav">Nav
+
+</nav>
+ 
+  <article id="mainArticle">Article</article>
+
+  <div id="siteSub1">Sub1</div>
+  <div id="siteSub2">Sub2</div>
+  <footer id="pageFooter">Footer</footer>
+</body>
